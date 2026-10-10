@@ -376,7 +376,7 @@ budgetRange.addEventListener("input", updateBudget);
 document.getElementById("resetBudget").addEventListener(
     "click",
     function () {
-        budgetRange.value = 3000;
+        budgetRange.value = 5000;
         updateBudget();
     }
 );
