@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f7f2">
+
+    <title>HiddenNepal | Discover the Unseen</title>
+    <meta name="description" content="Discover Nepal's hidden destinations, peaceful trails, mountain escapes and beautiful places.">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <a href="#home" class="logo">🏔 HiddenNepal<span>.</span></a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#budget">Budget</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#wishlist" class="nav-wishlist">
+            ♡ Wishlist <span id="wishlistCount">0</span>
+        </a>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="subtitle">DISCOVER THE UNSEEN</p>
+                <h1>Nepal is more<br>than you know.</h1>
+
+                <p class="hero-description">
+                    Find hidden destinations, peaceful trails and
+                    extraordinary places beyond the usual tourist spots.
+                </p>
+
+                <a href="#explore" class="btn hero-btn">
+                    Explore Places <span>↗</span>
+                </a>
+            </div>
+
+            <div class="hero-note">
+                <span class="hero-dot"></span>
+                MADE FOR THE CURIOUS
+            </div>
+
+            <div class="hero-bottom">
+                <span>27°42' N · 85°19' E</span>
+                <span>YOUR JOURNEY STARTS HERE</span>
+            </div>
+        </section>
+
+        <!-- DESTINATIONS -->
+        <section class="section destinations" id="explore">
+
+            <div class="section-heading">
+                <div>
+                    <p class="subtitle">YOUR NEXT ADVENTURE</p>
+                    <h2>Hidden Destinations<span>.</span></h2>
+                </div>
+
+                <p class="heading-description">
+                    Little-known places.<br>
+                    Unforgettable journeys.
+                </p>
+            </div>
+
+            <!-- CATEGORY FILTERS -->
+            <div class="filter-bar">
+                <div class="filter-label">
+                    <span class="filter-icon">⌕</span>
+                    <span>Find your kind of escape</span>
+                </div>
+
+                <div class="category-filters" id="categoryFilters">
+                    <button class="filter-btn active" data-category="All">All places</button>
+                    <button class="filter-btn" data-category="Mountains">Mountains</button>
+                    <button class="filter-btn" data-category="Lakes">Lakes</button>
+                    <button class="filter-btn" data-category="Nature">Nature</button>
+                    <button class="filter-btn" data-category="Culture">Culture</button>
+                    <button class="filter-btn" data-category="Adventure">Adventure</button>
+                </div>
+            </div>
+
+            <div class="slider-instructions">
+                <span id="featuredCount">07 featured destinations</span>
+                <span>Drag or swipe to explore <span class="swipe-symbol">↔</span></span>
+            </div>
+
+            <!-- HORIZONTAL SLIDER: FIRST SEVEN DESTINATIONS -->
+            <div class="slider-window" id="sliderWindow">
+                <div class="destination-track" id="destinationTrack">
+
+                    <!-- 1. RARA LAKE -->
+                    <article class="card"
+                        data-place="Rara Lake"
+                        data-category="Lakes"
+                        data-budget="4000">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://api.raratreks.com/modules/files/09521828112025uCN4BH.jpg"
+                                alt="Serene lake and mountain scenery"
+                                loading="lazy">
+
+                            <span class="image-number">01</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Rara Lake to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Lakes</span>
+                            <h3>Rara Lake</h3>
+                            <p>Mugu · Lakeside escape</p>
+                            <p class="price">From NPR 4,000+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Rara Lake">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 2. MARDI HIMAL -->
+                    <article class="card"
+                        data-place="Mardi Himal"
+                        data-category="Adventure"
+                        data-budget="3000">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTJzYKau6hXyCZFaznfL9exyu_h_ttnAE5a0Nu1iwwvawJ9P-qMf0jwpI&s=10"
+                                alt="Himalayan mountain peaks"
+                                loading="lazy">
+
+                            <span class="image-number">02</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Mardi Himal to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Adventure</span>
+                            <h3>Mardi Himal</h3>
+                            <p>Kaski · Himalayan trekking</p>
+                            <p class="price">From NPR 3,000+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Mardi Himal">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 3. HUMLA -->
+                    <article class="card"
+                        data-place="Humla"
+                        data-category="Mountains"
+                        data-budget="3000">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://greathimalayatrail.com/wp-content/uploads/2019/10/Limi-Valley-Banner.jpg"
+                                alt="Himalayan mountain landscape in Humla"
+                                loading="lazy">
+
+                            <span class="image-number">03</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Humla to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Mountains</span>
+                            <h3>Humla</h3>
+                            <p>Karnali Province · Remote Himalayas</p>
+                            <p class="price">From NPR 3,000+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Humla">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 4. GOSAIKUNDA -->
+                    <article class="card"
+                        data-place="Gosaikunda"
+                        data-category="Lakes"
+                        data-budget="2000">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://nepaloramatrekking.com/wp-content/uploads/2024/11/Gosaikunda-Banner-Image-.jpg"
+                                alt="Mountain lake scenery"
+                                loading="lazy">
+
+                            <span class="image-number">04</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Gosaikunda to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Lakes</span>
+                            <h3>Gosaikunda</h3>
+                            <p>Rasuwa · Sacred alpine lake</p>
+                            <p class="price">From NPR 2,000+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Gosaikunda">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 5. ILAM -->
+                    <article class="card"
+                        data-place="Ilam"
+                        data-category="Nature"
+                        data-budget="1500">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://assets-cdn.kathmandupost.com/uploads/source/news/2021/money/kanyamweb-1624287001.jpg"
+                                alt="Lush green forest landscape"
+                                loading="lazy">
+
+                            <span class="image-number">05</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Ilam to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Nature</span>
+                            <h3>Ilam</h3>
+                            <p>Eastern Nepal · Tea gardens</p>
+                            <p class="price">From NPR 1,500+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Ilam">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 6. PHULCHOWKI -->
+                    <article class="card"
+                        data-place="Phulchowki"
+                        data-category="Nature"
+                        data-budget="500">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdaT52aQGQz5SmEF7qPVjOCGPr0OvczgQJLcM4YJxx6geHzxe7VCM1vsc&s=10"
+                                alt="Green hills and scenic landscape"
+                                loading="lazy">
+
+                            <span class="image-number">06</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Phulchowki to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Nature</span>
+                            <h3>Phulchowki</h3>
+                            <p>Lalitpur · Hills and birdwatching</p>
+                            <p class="price">From NPR 500+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Phulchowki">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 7. BANDIPUR -->
+                    <article class="card"
+                        data-place="Bandipur"
+                        data-category="Culture"
+                        data-budget="1500">
+
+                        <div class="image-wrap">
+                            <img
+                                src="https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/716c0c193e9c2cc26d0922dc221488df1301a9693530cef34f92a4cbff47a122.png"
+                                alt="Architectural details in Bandipur"
+                                loading="lazy">
+
+                            <span class="image-number">07</span>
+
+                            <button class="wish-btn"
+                                aria-label="Add Bandipur to wishlist"
+                                aria-pressed="false">♡</button>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="tag">Culture</span>
+                            <h3>Bandipur</h3>
+                            <p>Tanahun · Heritage town</p>
+                            <p class="price">From NPR 1,500+</p>
+
+                            <button class="details-btn"
+                                data-open-details="Bandipur">
+                                Discover place <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <p class="slider-note">
+                Keep exploring. Your next favourite place is waiting.
+            </p>
+
+            <!-- EXPLORE ALL DESTINATIONS -->
+            <section class="more-section">
+                <div>
+                    <p class="subtitle">BEYOND THE USUAL</p>
+                    <h2>There is always<br>more to discover.</h2>
+                    <p>
+                        Go beyond the familiar and find your next
+                        favourite corner of Nepal.
+                    </p>
+                </div>
+
+                <button class="btn explore-all-btn"
+                    id="exploreAllBtn"
+                    aria-expanded="false"
+                    aria-controls="extraDestinations">
+                    Explore All Destinations <span>↓</span>
+                </button>
+            </section>
+
+            <!-- REMAINING FIVE DESTINATIONS -->
+            <div class="extra-destinations" id="extraDestinations" hidden>
+
+                <!-- 8. KHUMAI DANDA -->
+                <article class="card"
+                    data-place="Khumai Danda"
+                    data-category="Mountains"
+                    data-budget="1000">
+
+                    <div class="image-wrap">
+                        <img
+                            src="https://www.nepaltrekkinginhimalaya.com/images/articles/Zvm9v-khumai-danda.jpg"
+                            alt="Mountain landscape at Khumai Danda"
+                            loading="lazy">
+
+                        <button class="wish-btn"
+                            aria-label="Add Khumai Danda to wishlist"
+                            aria-pressed="false">♡</button>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="tag">Mountains</span>
+                        <h3>Khumai Danda</h3>
+                        <p>Kaski · Mountain views</p>
+                        <p class="price">From NPR 1,000+</p>
+
+                        <button class="details-btn"
+                            data-open-details="Khumai Danda">
+                            Discover place <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 9. KAKANI -->
+                <article class="card"
+                    data-place="Kakani"
+                    data-category="Nature"
+                    data-budget="500">
+
+                    <div class="image-wrap">
+                        <img
+                            src="https://media.app.nepalguidetrekking.com/uploads/fullbanner/drone-shot-kakani-viewpoint.webp"
+                            alt="Hills and mountain views in Kakani"
+                            loading="lazy">
+
+                        <button class="wish-btn"
+                            aria-label="Add Kakani to wishlist"
+                            aria-pressed="false">♡</button>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="tag">Nature</span>
+                        <h3>Kakani</h3>
+                        <p>Nuwakot · Hilltop escape</p>
+                        <p class="price">From NPR 500+</p>
+
+                        <button class="details-btn"
+                            data-open-details="Kakani">
+                            Discover place <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 10. TINJURE MILKE JALJALE -->
+                <article class="card"
+                    data-place="Tinjure Milke Jaljale"
+                    data-category="Nature"
+                    data-budget="1500">
+
+                    <div class="image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                            alt="Green forest landscape"
+                            loading="lazy">
+
+                        <button class="wish-btn"
+                            aria-label="Add Tinjure Milke Jaljale to wishlist"
+                            aria-pressed="false">♡</button>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="tag">Nature</span>
+                        <h3>Tinjure Milke Jaljale</h3>
+                        <p>Eastern Nepal · Forest trails</p>
+                        <p class="price">From NPR 1,500+</p>
+
+                        <button class="details-btn"
+                            data-open-details="Tinjure Milke Jaljale">
+                            Discover place <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 11. SHIVAPURI -->
+                <article class="card"
+                    data-place="Shivapuri"
+                    data-category="Nature"
+                    data-budget="500">
+
+                    <div class="image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+                            alt="Quiet green forest"
+                            loading="lazy">
+
+                        <button class="wish-btn"
+                            aria-label="Add Shivapuri to wishlist"
+                            aria-pressed="false">♡</button>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="tag">Nature</span>
+                        <h3>Shivapuri</h3>
+                        <p>Kathmandu Valley · Forest escape</p>
+                        <p class="price">From NPR 500+</p>
+
+                        <button class="details-btn"
+                            data-open-details="Shivapuri">
+                            Discover place <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 12. PIKEY PEAK -->
+                <article class="card"
+                    data-place="Pikey Peak"
+                    data-category="Adventure"
+                    data-budget="2500">
+
+                    <div class="image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"
+                            alt="Mountain peaks beneath a night sky"
+                            loading="lazy">
+
+                        <button class="wish-btn"
+                            aria-label="Add Pikey Peak to wishlist"
+                            aria-pressed="false">♡</button>
+                    </div>
+
+                    <div class="card-info">
+                        <span class="tag">Adventure</span>
+                        <h3>Pikey Peak</h3>
+                        <p>Solukhumbu · Mountain trekking</p>
+                        <p class="price">From NPR 2,500+</p>
+
+                        <button class="details-btn"
+                            data-open-details="Pikey Peak">
+                            Discover place <span>↗</span>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- BUDGET EXPLORER -->
+            <section class="budget-section" id="budget">
+
+                <div class="budget-copy">
+                    <p class="subtitle">TRAVEL YOUR WAY</p>
+                    <h2>Big adventures.<br>Your kind of budget.</h2>
+                    <p>
+                        Choose your budget and discover destinations
+                        that fit your plans.
+                    </p>
+                </div>
+
+                <div class="budget-panel">
+                    <div class="budget-topline">
+                        <label for="budgetRange">Your estimated budget</label>
+                        <strong id="budgetValue">NPR 3,000</strong>
+                    </div>
+
+                    <input type="range"
+                        id="budgetRange"
+                        min="500"
+                        max="10000"
+                        step="500"
+                        value="5000">
+
+                    <div class="range-labels">
+                        <span>NPR 500</span>
+                        <span>NPR 10,000+</span>
+                    </div>
+
+                    <p class="budget-result"
+                        id="budgetResult"
+                        aria-live="polite">
+                        Destinations within your budget will appear here.
+                    </p>
+
+                    <button class="btn budget-reset" id="resetBudget">
+                        Reset budget
+                    </button>
+                </div>
+            </section>
+
+            <!-- WISHLIST -->
+            <section class="wishlist-section" id="wishlist">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="subtitle">SAVE FOR LATER</p>
+                        <h2>Your Wishlist<span>.</span></h2>
+                    </div>
+
+                    <p class="heading-description">
+                        Keep your next adventures close.
+                    </p>
+                </div>
+
+                <div class="wishlist-grid" id="wishlistGrid"></div>
+
+                <p class="empty-wishlist" id="emptyWishlist">
+                    ♡ Your wishlist is waiting. Save a destination by clicking its heart.
+                </p>
+            </section>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <p class="subtitle">THE IDEA BEHIND HIDDENNEPAL</p>
+            <h2>There is more to Nepal.</h2>
+
+            <p>
+                HiddenNepal is a travel discovery concept for curious explorers.
+                Find peaceful getaways, scenic landscapes and memorable experiences
+                beyond the usual tourist spots.
+            </p>
+
+            <a href="#explore" class="about-link">
+                Find your next escape ↗
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="footer-logo">🏔 HiddenNepal.</a>
+        <p>Made for curious travellers.</p>
+        <p>© Hiraj Dhungana</p>
+    </footer>
+
+    <!-- DESTINATION DETAILS POPUP -->
+    <dialog class="details-dialog" id="detailsDialog">
+
+        <button class="close-dialog"
+            id="closeDialog"
+            aria-label="Close details">×</button>
+
+        <p class="subtitle">YOUR NEXT ADVENTURE</p>
+
+        <span class="tag" id="dialogCategory">Destination</span>
+
+        <h2 id="dialogTitle">Discover Nepal</h2>
+
+        <p class="dialog-location" id="dialogLocation"></p>
+
+        <p id="dialogDescription"></p>
+
+        <p class="dialog-budget" id="dialogBudget"></p>
+
+        <button class="btn dialog-close-btn" id="dialogDone">
+            Back to destinations
+        </button>
+    </dialog>
+
+</body>
+</html>
